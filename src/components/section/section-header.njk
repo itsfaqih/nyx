@@ -1,0 +1,8 @@
+{% macro title(text) %}
+  {% import "components/section/section-title.njk" as title %}
+  {{ title.label(text) }}
+{% endmacro %}
+{% macro desc(text) %}
+  {% import "components/section/section-desc.njk" as desc %}
+  {{ desc.label(text) }}
+{% endmacro %}

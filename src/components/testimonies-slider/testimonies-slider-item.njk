@@ -1,0 +1,15 @@
+{% macro props(name, message, photo = '../assets/img/no-image.svg') %}
+  <article>
+    <div class="flex">
+      <img class="object-cover w-32 h-32 rounded-full shadow-md" src="{{ photo }}" alt="{{ name }}'s testimony">
+      <div class="flex flex-col ml-8">
+        <p class="mb-6 text-lg text-white text-gray-300">
+          <span class="text-2xl">"</span>{{ message }}<span class="text-2xl">"</span>
+        </p>
+        <span class="text-lg text-gray-500">
+          {{ name }}
+        </span>
+      </div>
+    </div>
+  </article>
+{% endmacro %}

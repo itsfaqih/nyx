@@ -1,0 +1,29 @@
+{% macro props(title, price, desc = false, color = false, features = false) %}
+  <article class="w-full py-12 {% if color == 'red' %} text-red-500 border-red-500 {% elif color == 'green' %} text-green-500 border-green-500 {% elif color == 'blue' %} text-blue-500 border-blue-500 {% else %} text-white border-white {% endif %} border-4 rounded-lg">
+    <div class="flex flex-col items-center mb-12">
+      <h4 class="text-4xl font-bold tracking-wider uppercase">
+        {{ title }}
+      </h4>
+      {% if desc != false %}
+        <h5 class="text-lg font-medium">
+          {{ desc }}
+        </h5>
+      {% endif %}
+    </div>
+    {% if features != false %}
+      <ul class="flex flex-col px-12 mb-10">
+        {% for item in features %}
+          <li class="mb-6 last:mb-0 flex items-center font-medium text-xl {% if item.active == false %} text-gray-500 {% endif %}">
+            <svg class="w-6 h-6 mr-4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span>
+              {{ item.label }}
+            </span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <span class="flex justify-center w-full text-5xl font-bold">
+      Rp {{ price }}
+    </span>
+  </article>
+{% endmacro %}

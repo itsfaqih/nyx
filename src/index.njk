@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/styles.pcss">
+  </head>
+  <body class="h-screen antialiased bg-gray-900 font-inter">
+    {% include "components/navbar.njk" %}
+    <main>
+      {% include "sections/introduction.njk" %}
+      {% include "sections/works.njk" %}
+      {% include "sections/testimonies.njk" %}
+      {% include "sections/pricing.njk" %}
+      {% include "sections/contact.njk" %}
+    </main>
+  </body>
+  <script src="../assets/js/app.js"></script>
+</html>

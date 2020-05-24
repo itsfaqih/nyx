@@ -1,0 +1,16 @@
+<section id="works" class="mb-64">
+  <div class="container flex flex-col mx-auto">
+    <div class="flex items-end justify-between mb-10">
+      <div class="flex flex-col">
+        {% import "components/section/section-header.njk" as header %}
+        {{ header.title('Works') }}
+        {{ header.desc('Projects I’ve been working on') }}
+      </div>
+      <div class="mb-3">
+        {% import "components/button.njk" as button %}
+        {{ button.label('Start Now') }}
+      </div>
+    </div>
+    {% include "components/works-slider/works-slider.njk" %}
+  </div>
+</section>

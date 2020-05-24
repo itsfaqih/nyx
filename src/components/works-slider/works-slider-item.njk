@@ -1,0 +1,7 @@
+{% macro props(title, img = '../assets/img/no-image.svg', link = '#') %}
+  <article class="works-slider-item">
+    <a href="{{ link }}">
+      <img src="{{ img }}" alt="{{ title }}">
+    </a>
+  </article>
+{% endmacro %}

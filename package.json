@@ -1,0 +1,32 @@
+{
+  "name": "nyx",
+  "version": "1.0.0",
+  "description": "Free portfolio template made with TailwindCSS",
+  "main": "tailwind.config.js",
+  "dependencies": {
+    "lax.js": "^1.2.5",
+    "smooth-scrollbar": "^8.5.2",
+    "tailwindcss": "^1.4.6",
+    "tiny-slider": "^2.9.2"
+  },
+  "devDependencies": {
+    "nunjucks": "^3.2.1",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-nunjucks": "^2.2.0",
+    "tailwindcss-font-inter": "^1.0.8"
+  },
+  "scripts": {
+    "dev": "parcel src/index.njk",
+    "build": "parcel build src/index.njk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsfaqih/nyx.git"
+  },
+  "author": "itsfaqih <itsfaqih@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itsfaqih/nyx/issues"
+  },
+  "homepage": "https://github.com/itsfaqih/nyx#readme"
+}
